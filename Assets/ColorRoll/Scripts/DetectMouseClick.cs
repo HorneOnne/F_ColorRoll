@@ -12,13 +12,11 @@ namespace ColorRoll
             _paper = transform.parent.GetComponent<Paper>();
         }
 
-        //private void OnMouseDown()
-        //{
-        //    OnClick?.Invoke();
-        //}
+
 
         public void Click()
         {
+            SoundManager.Instance.PlaySound(SoundType.HitBlock, false);
             OnClick?.Invoke();
         }
     }

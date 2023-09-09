@@ -17,6 +17,8 @@ namespace ColorRoll
 
         private void Update()
         {
+            if (GameplayManager.Instance.CurrentState != GameplayManager.GameState.PLAYING) return;
+
             if (Input.GetMouseButtonDown(0)) 
             {
                 Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);

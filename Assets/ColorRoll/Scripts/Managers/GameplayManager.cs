@@ -56,7 +56,7 @@ namespace ColorRoll
 
         private void Start()
         {
-            ChangeGameState(GameState.PLAYING);
+            ChangeGameState(GameState.WAITING);
         }
         #endregion
 
@@ -77,27 +77,22 @@ namespace ColorRoll
         {
             switch (_currentState)
             {
-                default: break;
-                case GameState.PLAYING:
-
-                    OnPlaying?.Invoke();
-                    break;
+                default: break;        
                 case GameState.WAITING:
 
 
                     break;
-                case GameState.ROUNDFINISHED:
+                case GameState.PLAYING:
 
-                    OnRoundFinished?.Invoke();
-                    ChangeGameState(GameState.STARTNEXTROUND);
-                    break;
-                case GameState.STARTNEXTROUND:
-
-                    OnStartNextRound?.Invoke();
-                    break;
+                    OnPlaying?.Invoke();
+                    break; 
                 case GameState.WIN:
-
-
+                    SoundManager.Instance.PlaySound(SoundType.Win, false);
+                    GameManager.Instance.LevelUp();
+                    StartCoroutine(Utilities.WaitAfter(2.0f, () =>
+                    {
+                        Loader.Load(Loader.Scene.GameplayScene);
+                    }));
                     OnWin?.Invoke();
                     break;
                 case GameState.GAMEOVER:

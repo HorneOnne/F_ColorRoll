@@ -12,4 +12,6 @@ EditorBuildSettings:
     path: Assets/ColorRoll/Scenes/GameplayScene.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
   m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: aaec69b46ae7d0b42ba2cac6830e7dad, type: 2}
+    com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: 53a76bae4898d764287eed495c72c8eb, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 3d7cdce4819bd41478893e4f464761f3, type: 2}

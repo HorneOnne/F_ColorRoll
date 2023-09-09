@@ -36,7 +36,11 @@ namespace ColorRoll
                 _paperInSort[i].SpiteRenderer.sortingOrder = i + 1;
             }
 
-            Debug.Log(CheckWinCondition());
+            bool canWin = CheckWinCondition();
+            if(canWin)
+            {
+                GameplayManager.Instance.ChangeGameState(GameplayManager.GameState.WIN);
+            }
         }
 
         public bool CheckWinCondition()
