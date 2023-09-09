@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/ColorRoll/Scenes/MenuScene.unity
+    guid: f0cd57ec2e9fdb7438df4e0450d6ec1e
+  - enabled: 1
     path: Assets/ColorRoll/Scenes/GameplayScene.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
   m_configObjects:
